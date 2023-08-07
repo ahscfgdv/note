@@ -9,7 +9,22 @@
 - 路径描述的层次关系同样适用`/`来表示
 - /home/itheima/a.txt，表示根目录下的home文件夹内有itheima文件夹，内有a.txt
 
-## ls命令
+## liunx 命令
+
+Linux 命令通用格式 command [-options] [parameter]
+
+例:`cp -r dir dir` `-r 方式 dir 参数`
+
+选项可以组合使用 如:`ls -alh`
+
+## 通配符
+
+`?` 匹配一个字符
+`*` 匹配多个字符
+
+使用例:\*test\* 匹配所用包含test的字符
+
+## ls命令 list
 
 功能：列出文件夹信息
 
@@ -26,19 +41,19 @@
 
 默认不显示出来，需要`-a`选项才可查看到。
 
-## pwd命令
+## pwd命令 print work directory
 
 功能：展示当前工作目录
 
 语法：`pwd`
 
-## cd命令
+## cd命令 change directory
 
 功能：切换工作目录
 
 语法：`cd [目标目录]`
 
-参数：目标目录，要切换去的地方，不提供默认切换到`当前登录用户HOME目录`
+参数：目标目录，要切换去的地方，不提供默认切换到**当前登录用户HOME目录**
 
 ## HOME目录
 
@@ -66,7 +81,7 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 - `..`，表示上级目录，比如`../`表示上级目录，`../../`表示上级的上级目录
 - `~`，表示用户的HOME目录，比如`cd ~`，即可切回用户HOME目录
 
-## mkdir命令
+## mkdir命令 make directory
 
 功能：创建文件夹
 
@@ -74,6 +89,8 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 - 参数：被创建文件夹的路径
 - 选项：-p，可选，表示创建前置路径
+
+      使用例 mkdir ~test1/test2/test3 创建多个前置路径
 
 ## touch命令
 
@@ -102,7 +119,7 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
   - `空格`键翻页
   - `q`退出查看
 
-## cp命令
+## cp命令 copy
 
 功能：复制文件、文件夹
 
@@ -118,7 +135,7 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 - cp a.txt test/，复制当前目录a.txt到test文件夹内
 - cp -r test test2，复制文件夹test到当前文件夹内为test2存在
 
-## mv命令
+## mv命令 move
 
 功能：移动文件、文件夹
 
@@ -127,7 +144,7 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 - 参数1：被移动的
 - 参数2：要移动去的地方，参数2如果不存在，则会进行改名
 
-## rm命令
+## rm命令 remove
 
 功能：删除文件、文件夹
 
@@ -141,7 +158,7 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 ## which命令
 
-功能：查看命令的程序本体文件路径
+功能：查看命令的程序本体文件路径,查看命令对应的二进制文件
 
 语法：`which 参数`
 
@@ -152,9 +169,13 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 功能：搜索文件
 
 语法1按文件名搜索：`find 路径 -name 参数`
+语法2按文件大小搜索：`find 路径 -size 参数`
 
 - 路径，搜索的起始路径
-- 参数，搜索的关键字，支持通配符*， 比如：`*`test表示搜索任意以test结尾的文件
+- 语法1参数，搜索的关键字，支持通配符*， 比如：`*`test表示搜索任意以test结尾的文件
+- 语法2参数，查找文件的大小以`KMG`为单位`+-`表示范围
+
+使用例:`find / -size +100M` 查找根目录下大于100MB的文件
 
 ## grep命令
 
@@ -216,10 +237,11 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 功能：查看文件尾部内容
 
-语法：`tail [-f] 参数`
+语法：`tail [-f -num] 参数`
 
 - 参数：被查看的文件
 - 选项：-f，持续跟踪文件修改
+- 选项：-num，从尾部开始查看多少行
 
 ## head命令
 
@@ -238,6 +260,8 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 - `>>`，表示追加输出
 
 ## vi编辑器
+
+![图片](images/vi-vim-cheat-sheet-sch1.gif)
 
 ### 命令模式快捷键
 
@@ -275,6 +299,8 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 ## Linux常用操作
 
+## linux常用快捷键
+
 ## 软件安装
 
 - CentOS系统使用：
@@ -284,19 +310,28 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
     - search 搜索
     - -y，自动确认
 - Ubuntu系统使用
+  - 在线安装应用
   - apt [install remove search] [-y] 软件名称
     - install 安装
     - remove 卸载
     - search 搜索
     - -y，自动确认
+  - 安装本地deb包
+  - sudo dpkg -i package_name.deb
 
 > yum 和 apt 均需要root权限
+
+## gnome-screenshot
+
+截图
 
 ## systemctl
 
 功能：控制系统服务的启动关闭等
 
 语法：`systemctl start | stop | restart | disable | enable | status 服务名`
+
+不加任何参数展示所用的服务进程
 
 - start，启动
 - stop，停止
@@ -312,7 +347,7 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 语法：`ln -s 参数1 参数2`
 
 - 参数1：被链接的
-- 参数2：要链接去的地方（快捷方式的名称和存放位置）
+- 参数2：**要链接去的地方（快捷方式的名称和存放位置）**
 
 ## 日期
 
@@ -396,27 +431,27 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
    示例文件内容：
 
-   ```shell
-   TYPE="Ethernet"
-   PROXY_METHOD="none"
-   BROWSER_ONLY="no"
-   BOOTPROTO="static"   # 改为static，固定IP
-   DEFROUTE="yes"
-   IPV4_FAILURE_FATAL="no"
-   IPV6INIT="yes"
-   IPV6_AUTOCONF="yes"
-   IPV6_DEFROUTE="yes"
-   IPV6_FAILURE_FATAL="no"
-   IPV6_ADDR_GEN_MODE="stable-privacy"
-   NAME="ens33"
-   UUID="1b0011cb-0d2e-4eaa-8a11-af7d50ebc876"
-   DEVICE="ens33"
-   ONBOOT="yes"
-   IPADDR="192.168.88.131"    # IP地址，自己设置，要匹配网络范围
-   NETMASK="255.255.255.0"    # 子网掩码，固定写法255.255.255.0
-   GATEWAY="192.168.88.2"   # 网关，要和VMware中配置的一致
-   DNS1="192.168.88.2"    # DNS1服务器，和网关一致即可
-   ```
+    ```shell
+    TYPE="Ethernet"
+    PROXY_METHOD="none"
+    BROWSER_ONLY="no"
+    BOOTPROTO="static"   # 改为static，固定IP
+    DEFROUTE="yes"
+    IPV4_FAILURE_FATAL="no"
+    IPV6INIT="yes"
+    IPV6_AUTOCONF="yes"
+    IPV6_DEFROUTE="yes"
+    IPV6_FAILURE_FATAL="no"
+    IPV6_ADDR_GEN_MODE="stable-privacy"
+    NAME="ens33"
+    UUID="1b0011cb-0d2e-4eaa-8a11-af7d50ebc876"
+    DEVICE="ens33"
+    ONBOOT="yes"
+    IPADDR="192.168.88.131"    # IP地址，自己设置，要匹配网络范围
+    NETMASK="255.255.255.0"    # 子网掩码，固定写法255.255.255.0
+    GATEWAY="192.168.88.2"   # 网关，要和VMware中配置的一致
+    DNS1="192.168.88.2"    # DNS1服务器，和网关一致即可
+    ```
 
 ## ps命令
 
@@ -456,11 +491,33 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 ![image-20221027221210518](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221210.png)
 
+## ps
+
+语法：`ps [-e -f]`
+
+选型：-e，展示全部进程
+选项：-f，以格式化的形式展示全部信息
+![图片](images/截图%202023-08-07%2014-14-49.png)
+uid：进程所属的用户id
+pid：进程的进程号id
+ppid：进程的父id
+c：此进程的CPU占用率
+stime：进程的启动时间
+tty：启动此进程的终端序号
+time：进程占用cpu的时间
+cmd：进程的启动路径或命令
+
+## kill
+
+语法：`kill [-9] 进程id`
+选项：-9强制关闭进程
+
 ## top命令
 
 功能：查看主机运行状态
 
 语法：`top`，查看基础信息
+![图片](images/截图%202023-08-07%2014-50-37.png  )
 
 可用选项：
 
@@ -517,6 +574,15 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 如果变量名和其它内容混淆在一起，可以使用${}
 
+## export
+
+临时配置
+语法：`export 变量名=变量值`
+永久生效
+
+- 针对当前用户配置在当前用户的 ~/bashrc文件】
+- 针对所有用户配置/etc/profile
+
 ## 压缩解压
 
 ### 压缩
@@ -540,7 +606,7 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 ![image-20221027221939899](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221939.png)
 
-## su命令
+## su命令 switch user
 
 切换用户
 
@@ -560,6 +626,20 @@ itheima ALL=(ALL)       NOPASSWD: ALL
 
 在visudo内配置如上内容，可以让itheima用户，无需密码直接使用`sudo`
 
+## 权限信息
+
+![图片](images/2.png)
+
+1. 文件或文件夹的权限控制信息
+2. 第一个ljx表示文件所属的用户
+3. 第一个ljx表示文件所属的用户组
+
+![图片](images/截图%202023-08-06%2011-37-00.png)
+
+1. r表示读权限，针对文件夹可以查看文件夹内容
+2. w表示写权限，可以在文件夹内：创建、删除、改名
+3. x表示执行权限，可以更改工作目录到此文件夹
+
 ## chmod命令
 
 修改文件、文件夹权限
@@ -569,14 +649,20 @@ itheima ALL=(ALL)       NOPASSWD: ALL
 - 权限，要设置的权限，比如755，表示：`rwxr-xr-x`
 
   ![image-20221027222157276](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222157.png)
+  r记为4，w记为2，x记为1
 
 - 参数，被修改的文件、文件夹
 
 - 选项-R，设置文件夹和其内部全部内容一样生效
 
+`chmod [-R] u=rwx,g=rw,o=w "文件名或文件夹名"`
+`chmod [-R] 000 "文件名或文件夹名"`
+两种写法均可
+
 ## chown命令
 
 修改文件、文件夹所属用户、组
+**普通用户无法修改所属为其他用户或组，此命令适合root用户使用**
 
 语法：`chown [-R] [用户][:][用户组] 文件或文件夹`
 
@@ -590,7 +676,7 @@ itheima ALL=(ALL)       NOPASSWD: ALL
 
 ![image-20221027222407618](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222407.png)
 
-## genenv命令
+## getent命令
 
 - `getenv group`，查看系统全部的用户组
 
@@ -599,6 +685,9 @@ itheima ALL=(ALL)       NOPASSWD: ALL
 - `getenv passwd`，查看系统全部的用户
 
   ![image-20221027222512274](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222512.png)
+
+  ![图片](images/1.png)
+  用户名:密码:用户ID:组ID:描述信息:home目录:使用的终端
 
 ## env命令
 
