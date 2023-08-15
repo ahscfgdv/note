@@ -694,3 +694,5 @@ itheima ALL=(ALL)       NOPASSWD: ALL
 查看系统全部的环境变量
 
 语法：`env`
+
+## shell 脚本
