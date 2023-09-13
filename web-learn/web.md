@@ -97,3 +97,53 @@ xml可拓展标记语言
   * 没有浏览历史不能回退
   * 存在跨域问题
   * SEO不友好
+
+## spring
+
+* Spring框架概述
+  spring是一个开源的轻量级Java开发应用框架，可以简化企业级应用开发。Spring解决了开发者在JavaEE开发中遇到的许多常见的问题，提供了功能强大IOC、AOP及Web MVC等功能。是当前企业中Java开发几乎不能缺少的框架之一。Spring的生态及其完善，不管是Spring哪个领域的解决方案都是依附于在SpringFramework基础框架的
+
+### IoC(Inversion of Control)
+
+控制反转，强调的是在原来在程序中创建Bean的权利反转给第三方
+
+### DI(Dependency Injection)
+
+依赖注入，强调的Bean之间的关系，这种关系有第三方负责去设置
+
+### AOP(Aspect Oriented Programming)
+
+面相切面编程，功能的横向抽取，主要实现的方式就是Proxy
+
+## java
+
+### 面向对象
+
+**Java中的Interface与Impl**
+在Java编程中，Interface和Impl（即Implementation）是两个重要的概念。Interface是一种定义了一组方法签名的类，这些方法在其衍生类中实现。而Impl则是继承自Interface的类，实现了Interface中所定义的方法。在软件开发过程中，Interface与Impl的使用可以帮助我们更好地实现代码的抽象与复用
+
+**Interface的定义**
+Interface（接口）是Java中一种特殊的类，只定义了一系列方法的签名，而没有实际的实现。可以将Interface看作是一份契约，用来规定实现这个接口的类需要实现什么样的方法。例如：
+
+```java
+public interface Animal {
+public void eat();
+public void sleep();
+}
+```
+
+这里定义了一个名为Animal的Interface，其中包含了两个未实现的方法eat()和sleep()。这样，任何实现了Animal的类都必须提供这两个方法的实现。
+
+**Impl的定义**
+Impl（实现）是继承自Interface的类，它实现了Interface中所定义的方法。例如，我们可以定义一个实现Animal接口的Cat类：
+
+```java
+public class Cat implements Animal {
+public void eat() {
+    .out.println("Cat eats fish");
+}
+public void sleep() {
+    System.out.println("Cat sleeps 8 hours a day");
+}
+}
+```
