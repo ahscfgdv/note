@@ -15,6 +15,8 @@
 * [常见错误](常见错误/README.md)
   * [常见错误](常见错误/常见错误.md)
 * [操作系统](操作系统/README.md)
+  * [windows](操作系统/windows.md)
+  * [Linux](操作系统/linux.md)
   * [操作系统](操作系统/操作系统.md)
 * [数据结构 算法](<数据结构 算法/README.md>)
   * [数据结构与算法](<数据结构 算法/数据结构.md>)
@@ -25,3 +27,4 @@
 * [前端](前端/README.md)
   * [vue](前端/vue.md)
   * [nodejs](前端/nodejs.md)
+  * [html](前端/html.md)
