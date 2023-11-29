@@ -681,106 +681,6 @@ text-align本质是控制内容的对齐方式，属性要设置给内容的父�
 </html>
 ```
 
-## 综合案例
-
-**综合案例一 – 新闻详情**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>新闻详情</title>
-  <style>
-    h1 {
-      text-align: center;
-      font-weight: 400;
-      font-size: 30px;
-      color: #333;
-    }
-
-    div {
-      font-size: 14px;
-      color: #999;
-    }
-
-    p {
-      text-indent: 2em;
-      font-size: 18px;
-      color: #333;
-    }
-
-    /* div {
-      text-align: center;
-    } */
-
-    .pic {
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <h1>在希望的田野上 | 湖北秋收开镰 各地多举措保增产增收</h1>
-  <div>来源：央视网 | 2222年12月12日 12:12:12</div>
-  <p><strong>央视网消息：</strong>眼下，湖北省秋收开镰已有一周多的时间。水稻收割已经超过四成，玉米收割七成。湖北省通过大力推广新品种水稻，建设高标准农田等一系列措施，为秋粮稳产提供有力支撑。</p>
-  <p>中稻占据了湖北全年粮食产量的一半以上。在湖北的主产区荆门市，370万亩中稻已经收割四成以上。</p>
-  <div class="pic">
-    <img src="./1.jpg" alt="">
-  </div>
-  <p>王化林说的新品种，是湖北省研发的杂交水稻“华夏香丝”，不仅产量高，还具有抗病、抗倒、抗高温的特性。在荆门漳河镇的一工程示范田内，像“华夏香丝”这样抗旱节水的品种还有20多个，这些水稻新品将在荆门全面推广，确保来年增产增收。</p>
-  <p>此外，湖北还大力推进高标准农田建设。截至今年6月，已建成3980万亩高标准农田。目前，湖北全省仍有1800多万亩中稻正在有序收割中，预计10月中旬收割完毕。</p>
-</body>
-</html>
-```
-
-**综合案例二 – CSS 简介**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS 简介</title>
-  <style>
-    h1 {
-      color: #333;
-    }
-
-    p {
-      text-indent: 2em;
-      font-size: 14px;
-      color: #444;
-      line-height: 30px;
-    }
-
-    a {
-      color: #0069c2;
-    }
-
-    li {
-      font-size: 14px;
-      color: #444;
-      line-height: 30px;
-    }
-  </style>
-</head>
-<body>
-  <h1>CSS（层叠样式表）</h1>
-  <p>层叠样式表 (Cascading Style Sheets，缩写为 CSS），是一种 <a href="#">样式表</a> 语言，用来描述 HTML 或 XML（包括如 SVG、MathML、XHTML 之类的 XML 分支语言）文档的呈现。CSS 描述了在屏幕、纸质、音频等其它媒体上的元素应该如何被渲染的问题。</p>
-  <p><strong>CSS 是开放网络的核心语言之一</strong>，由 W3C 规范 实现跨浏览器的标准化。CSS 节省了大量的工作。 样式可以通过定义保存在外部.css 文件中，同时控制多个网页的布局，这意味着开发者不必经历在所有网页上编辑布局的麻烦。CSS 被分为不同等级：CSS1 现已废弃， CSS2.1 是推荐标准， CSS3 分成多个小模块且正在标准化中。</p>
-  <ul>
-    <li>CSS 介绍 如果你是 Web 开发的新手，请务必阅读我们的 CSS 基础 文章以学习 CSS 的含义和用法。</li>
-    <li>CSS 教程 我们的 CSS 学习区 包含了丰富的教程，它们覆盖了全部基础知识，能使你在 CSS 之路上从初出茅庐到游刃有余。</li>
-    <li>CSS 参考 针对资深 Web 开发者的 <a href="#">详细参考手册</a> ，描述了 CSS 的各个属性与概念。</li>
-  </ul>
-</body>
-</html>
-```
-
 ## 复合选择器
 
 **复合选择器**
@@ -1667,108 +1567,6 @@ contain：等比例缩放背景图片以完全装入背景区，可能背景区�
 
 ![images](./images/屏幕截图%202023-11-27%20164215.png)
 
-## 综合案例2
-
-**综合案例一-热词**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>热词</title>
-  <style>
-    /* 默认效果 */
-    a {
-      display: block;
-      width: 200px;
-      height: 80px;
-      background-color: #3064bb;
-      color: #fff;
-      text-decoration: none;
-      text-align: center;
-      line-height: 80px;
-      font-size: 18px;
-    }
-
-    /* 鼠标悬停的效果 */
-    a:hover {
-      background-color: #608dd9;
-    }
-  </style>
-</head>
-<body>
-  <a href="#">HTML</a>
-  <a href="#">CSS</a>
-  <a href="#">JavaScript</a>
-  <a href="#">Vue</a>
-  <a href="#">React</a>
-</body>
-</html>
-```
-
-**综合案例二 – banner 效果**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>banner效果</title>
-  <style>
-    .banner {
-      height: 500px;
-      background-color: #f3f3f4;
-      background-image: url(./images/bk.png);
-      background-repeat: no-repeat;
-      background-position: left bottom;
-
-      /* 文字控制属性，继承给子级 */
-      text-align: right;
-      color: #333;
-    }
-
-    .banner h2 {
-      font-size: 36px;
-      font-weight: 400;
-      line-height: 100px;
-    }
-
-    .banner p {
-      font-size: 20px;
-    }
-
-    .banner a {
-      width: 125px;
-      height: 40px;
-      background-color: #f06b1f;
-
-      display: inline-block;
-      /* 转块级无法右对齐，因为块元素独占一行 */
-      /* display: block; */
-
-      text-align: center;
-      line-height: 40px;
-      color: #fff;
-      text-decoration: none;
-      font-size: 20px;
-    }
-  </style>
-</head>
-<body>
-  <div class="banner">
-    <h2>让创造产生价值</h2>
-    <p>我们希望小游戏平台可以提供无限的可能性，让每一个创作者都可以将他们的才华和创意传递给用户。</p>
-    <a href="#">我要报名</a>
-  </div>
-</body>
-</html>
-```
-
 ## 选择器2
 
 **结构伪类选择器**
@@ -2522,164 +2320,6 @@ padding 多值写法
 </head>
 <body>
   <div></div>
-</body>
-</html>
-```
-
-## 综合案例3
-
-**综合案例一 – 产品卡片**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>产品卡片</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #f1f1f1;
-    }
-
-    .product {
-      margin: 50px auto;
-      padding-top: 40px;
-
-      width: 270px;
-      height: 253px;
-      background-color: #fff;
-      text-align: center;
-
-      border-radius: 10px;
-    }
-
-    .product h4 {
-      margin-top: 20px;
-      margin-bottom: 12px;
-      font-size: 18px;
-      color: #333;
-      font-weight: 400;
-    }
-
-    .product p {
-      font-size: 12px;
-      color: #555;
-    }
-  </style>
-</head>
-<body>
-  <div class="product">
-    <img src="./images/liveSDK.svg" alt="">
-    <h4>抖音直播SDK</h4>
-    <p>包含抖音直播看播功能</p>
-  </div>
-</body>
-</html>
-```
-
-**综合案例二 – 新闻列表**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>新闻列表</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    li {
-      list-style: none;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .news {
-      margin: 100px auto;
-      width: 360px;
-      height: 200px;
-      /* background-color: pink; */
-    }
-
-    .news .hd {
-      height: 34px;
-      background-color: #eee;
-      border: 1px solid #dbdee1;
-      border-left: 0;
-    }
-
-    .news .hd a {
-      /* -1 盒子向上移动 */
-      margin-top: -1px;
-      display: block;
-      border-top: 3px solid #ff8400;
-      border-right: 1px solid #dbdee1;
-      width: 48px;
-      height: 34px;
-      background-color: #fff;
-
-      text-align: center;
-      line-height: 32px;
-      font-size: 14px;
-      color: #333;
-    }
-
-    .news .bd {
-      padding: 5px;
-    }
-
-    .news .bd li {
-      padding-left: 15px;
-      background-image: url(./images/square.png);
-      background-repeat: no-repeat;
-      background-position: 0 center;
-    }
-
-    .news .bd li a {
-      padding-left: 20px;
-      background: url(./images/img.gif) no-repeat 0 center;
-
-      font-size: 12px;
-      color: #666;
-      line-height: 24px;
-    }
-
-    .news .bd li a:hover {
-      color: #ff8400;
-    }
-  </style>
-</head>
-<body>
-  <!-- 新闻区域 包含 标题 + 内容 -->
-  <div class="news">
-    <div class="hd"><a href="#">新闻</a></div>
-    <div class="bd">
-      <ul>
-        <li><a href="#">点赞“新农人” 温暖的伸手</a></li>
-        <li><a href="#">在希望的田野上...</a></li>
-        <li><a href="#">“中国天眼”又有新发现 已在《自然》杂志发表</a></li>
-        <li><a href="#">急！这个领域，缺人！月薪4万元还不好招！啥情况？</a></li>
-        <li><a href="#">G9“带货”背后：亏损面持续扩大，竞争环境激烈</a></li>
-        <li><a href="#">多地力推二手房“带押过户”，有什么好处？</a></li>
-      </ul>
-    </div>
-  </div>
 </body>
 </html>
 ```
@@ -3938,39 +3578,272 @@ transform: translate(-50%, -50%)
 </html>
 ```
 
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
-![images]()
+## CSS 精灵
+
+CSS 精灵，也叫 CSS Sprites，是一种网页图片应用处理方式。把网页中一些背景图片整合到一张图片文件中，再background-position 精确的定位出背景图片的位置。
+
+优点：减少服务器被请求次数，减轻服务器的压力，提高页面加载速度
+
+实现步骤：
+
+1. 创建盒子，盒子尺寸与小图尺寸相同
+2. 设置盒子背景图为精灵图
+3. 添加 background-position 属性，改变背景图位置
+使用 PxCook 测量小图片左上角坐标
+取负数坐标为 background-position 属性值（向左上移动图片位置）
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 精灵-基本使用</title>
+  <style>
+    div {
+      width: 112px;
+      height: 110px;
+      background-color: pink;
+      background-image: url(./images/abcd.jpg);
+      background-position: -256px -276px;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
+```
+
+**字体图标**
+
+字体图标：展示的是图标，本质是字体
+作用：在网页中添加简单的、颜色单一的小图标
+优点
+灵活性：灵活地修改样式，例如：尺寸、颜色等
+轻量级：体积小、渲染快、降低服务器请求次数
+兼容性：几乎兼容所有主流浏览器
+使用方便：先下载再使用
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>体验字体图标</title>
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <style>
+    .iconfont {
+      font-size: 200px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <span class="iconfont icon-icon-test2"></span>
+</body>
+</html>
+```
+
+**字体图标 – 下载字体**
+
+l iconfont 图标库：<https://www.iconfont.cn/>
+l 下载字体
+登录 → 素材库 → 官方图标库 → 进入图标库 → 选图标，加入购物车 → 购物车，添加至项目，确定→下载至本地
+
+![字体图表](./images/屏幕截图%202023-11-29%20172059.png)
+
+**字体图标 – 使用字体**
+
+1. 引入字体样式表（iconfont.css）
+2. 标签使用字体图标类名
+3. iconfont：字体图标基本样式（字体名，字体大小等等）
+4. icon-xxx：图标对应的类名
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用字体图标</title>
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <style>
+    /* 如果要调整字体大小，注意 选择器的优先级 要高于 iconfont 类 */
+    .iconfont {
+      font-size: 200px;
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <span class="iconfont icon-icon-test3"></span>
+</body>
+</html>
+```
+
+**字体图标 – 上传矢量图**
+
+作用：项目特有的图标上传到 iconfont 图标库，生成字体
+上传步骤
+上传 → 上传图标 → 选择 svg 矢量图，打开 → 提交 → 系统审核
+
+## CSS 修饰属性
+
+**垂直对齐方式 vertical-align**
+
+属性名：vertical-align
+属性值
+
+![images](./images/屏幕截图%202023-11-29%20173137.png)
+
+![images](./images/屏幕截图%202023-11-29%20173829.png)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>垂直对齐方式</title>
+  <style>
+    div {
+      border: 1px solid #000;
+    }
+
+    img {
+      /* vertical-align: middle; */
+
+      /* 顶对齐：最高内容的顶部 */
+      /* vertical-align: top; */
+
+      /* 底对齐：最高内容的底部 */
+      /* vertical-align: bottom; */
+
+      /* 因为浏览器把行内块、行内标签当做文字处理，默认按基线对齐 */
+      /* 效果：图片img的底下有空白，转块级不按基线对齐，空白就消失了 */
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="./images/1.webp" alt="">
+    <!-- 我是谁？我在哪？ -->
+  </div>
+</body>
+</html>
+```
+
+**过渡 transition**
+
+作用：可以为一个元素在不同状态之间切换的时候添加过渡效果
+属性名：transition（复合属性）
+属性值：过渡的属性 花费时间 (s)
+提示：
+
+- 过渡的属性可以是具体的 CSS 属性
+- 也可以为 all（两个状态属性值不同的所有属性，都产生过渡效果）
+- transition 设置给元素本身
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      width: 200px;
+      height: 150px;
+      transition: all 1s;
+    }
+
+    img:hover {
+      width: 500px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <img src="./images/huawei.jpg" alt="">
+</body>
+</html>
+```
+
+**透明度 opacity**
+
+作用：设置整个元素的透明度（包含背景和内容）
+属性名：opacity
+属性值：0 – 1
+
+- 0：完全透明（元素不可见）
+- 1：不透明
+- 0-1之间小数：半透明
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>透明度</title>
+  <style>
+    div {
+      width: 500px;
+      height: 500px;
+      background-color: orange;
+
+      opacity: 0;
+
+      opacity: 1;
+
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="./images/phone.png" alt="">
+  </div>
+</body>
+</html>
+```
+
+**光标类型 cursor**
+
+![images](./images/屏幕截图%202023-11-29%20173657.png)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>光标类型</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+
+      cursor: pointer;    
+      cursor: text;  
+      cursor: move;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
+```
