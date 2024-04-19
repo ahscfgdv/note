@@ -8,9 +8,9 @@
 关闭wsl`wsl --shutdown`
 查看安装版本`wsl -l --all -v`
 列出可用的分发版`wsl --list --online`
-导出系统`wsl --export Ubuntu-22.04 E:\WSL-Ubuntu-22.04.tar`
+导出系统`wsl --export Ubuntu-22.04 D:\WSL-Ubuntu-22.04.tar`
 注销当前版本`wsl --unregister Ubuntu-22.04`
-重新导入`wsl --import Ubuntu-22.04 E:\WSL-Ubuntu-22.04 E:\WSL-Ubuntu-22.04.tar --version2`
+重新导入`wsl --import Ubuntu-22.04 D:\WSL-Ubuntu-22.04 D:\WSL-Ubuntu-22.04.tar --version2`
 
 
 ## 卸载wsl2
