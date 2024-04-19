@@ -130,8 +130,6 @@ mv [options] source destination
 
 `tar` 命令用于创建和提取归档文件（通常称为 tarball），它将多个文件合并到一个文件中，然后可以压缩这个文件以节省空间。下面是 `tar` 命令的一些常用参数及其解释：
 
-### 创建归档文件
-
 1. **-c, --create**
     - 创建归档文件。
 
@@ -185,6 +183,20 @@ mv [options] source destination
 
 `tar` 命令的参数组合和具体用法会根据你的需求和场景有所不同。例如，要创建一个压缩的归档文件，可以使用 `tar -czvf archive.tar.gz files/`，其中 `-c` 表示创建，`-z` 表示使用 gzip 压缩，`-v` 表示显示详细信息，`-f` 指定归档文件名称，`files/` 是要归档的文件目录。
 
+## 进程相关
+
+## 环境配置
+
+
+
+## 权限相关
+
+### 主机名
+
+`hostname`:查看主机名
+
+`hostnamectl set-hostname 主机名`:修改主机名
+
 ### 配置ssh服务
 
 **安装ssh server**
@@ -200,3 +212,9 @@ cat ./id_rsa.pub >> ./authorized_keys
 ### ubuntu配置下载源
 
 <https://blog.csdn.net/weixin_53000184/article/details/130782900>
+
+### aptitude
+
+<https://blog.csdn.net/liaowenxiong/article/details/118963228>
+
+## 
