@@ -1,5 +1,10 @@
 # windows
 
+## 输入法
+
+win11，使用微软自带简体中文输入法。切换应用，输入法会自动切换成“英文”输入模式，如何解决？
+<https://www.zhihu.com/question/602397490>
+
 ## windows防火墙
 
 `netsh advfirewall firewall add rule name="WSL SSH" dir=in action=allow protocol=TCP localport=2200`
@@ -22,3 +27,33 @@
 
 解决“无法加载文件 ***\WindowsPowerShell\profile.ps1，因为在此系统上禁止运行脚本”
 <https://zhuanlan.zhihu.com/p/452273123>
+
+## 进程端口管理
+
+```shell
+Loading personal and system profiles took 1114ms.
+(base) PS C:\Users\ljx> netstat -aon|findstr "8080"
+  TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       10080
+  TCP    [::]:8080              [::]:0                 LISTENING       10080
+(base) PS C:\Users\ljx> tasklist|findstr "10080"
+java.exe                     10080 Console                    1     34,248 K
+(base) PS C:\Users\ljx> taskkill /T /F /PID 10080
+SUCCESS: The process with PID 16364 (child process of PID 10080) has been terminated.
+SUCCESS: The process with PID 10080 (child process of PID 19688) has been terminated.
+(base) PS C:\Users\ljx>
+```
+
+
+设置优化<https://www.youtube.com/watch?v=oyWiYyacj0I&t=17s>
+
+
+```
+<VirtualHost 192.168.159.129>
+    DocumentRoot "/home/web/test1"
+    ServerName test1.com
+    <Directory /home/web/test1>
+      AllowOverride None
+      Require all granted
+    </Directory>
+</VirtualHost>
+```
